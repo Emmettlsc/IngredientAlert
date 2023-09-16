@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-	implementation 'pl.coderion:openfoodfacts-java-wrapper:0.9.3'
+//	implementation 'pl.coderion:openfoodfacts-java-wrapper:0.9.3'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
