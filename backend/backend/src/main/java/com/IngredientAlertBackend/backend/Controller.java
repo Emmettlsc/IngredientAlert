@@ -2,23 +2,20 @@ package com.IngredientAlertBackend.backend;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-//import pl.coderion.model.ProductResponse;
-//import pl.coderion.service.OpenFoodFactsWrapper;
-//import pl.coderion.service.impl.OpenFoodFactsWrapperImpl;
+import org.springframework.web.client.RestTemplate;
 
 @RestController
 public class Controller {
 
-//    @GetMapping("/api/{param}")
-//    public ProductResponse getIngredient(@PathVariable String code) {
-//        OpenFoodFactsWrapper wrapper = new OpenFoodFactsWrapperImpl();
-//        ProductResponse productResponse = wrapper.fetchProductByCode(code);
-//        return productResponse;
-//    }
+    @GetMapping("/api/code/{param}")
+    public String getCode(@PathVariable String param) {
+        String url = "https://world.openfoodfacts.org/api/v2/product/" + param + ".json";
+        RestTemplate temp = new RestTemplate();
+        String result = temp.getForObject(url,String.class);
+        return result;
+    }
     @GetMapping("/api/test")
     public String getIngredient() {
-//        OpenFoodFactsWrapper wrapper = new OpenFoodFactsWrapperImpl();
-//        ProductResponse productResponse = wrapper.fetchProductByCode(code);
         return "hello";
     }
 

@@ -13,12 +13,15 @@ java {
 
 repositories {
 	mavenCentral()
+	google()
 }
 
 dependencies {
-//	implementation 'pl.coderion:openfoodfacts-java-wrapper:0.9.3'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'pl.coderion:openfoodfacts-java-wrapper:0.9.3'
+	implementation group: 'org.postgresql', name: 'postgresql', version: '42.6.0'
 }
 
 tasks.named('test') {
