@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
 
     @GetMapping("/api/{param}")
-    public String index(@PathVariable String ingredient) {
+    public String getIngredient(@PathVariable String ingredient) {
+        OpenFoodFactsWrapper wrapper = new OpenFoodFactsWrapperImpl();
+        ProductResponse productResponse = wrapper.fetchProductByCode("737628064502");
         return "Here is your ingredient: " + ingredient;
     }
 
@@ -15,8 +17,27 @@ public class Controller {
 
 class Ingredient {
     private String name;
+    private String[] ingredients;
+
+    private String effect;
 
     public String getName() {
         return name;
+    }
+
+    public String[] getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(String[] ingredients) {
+        this.ingredients = ingredients;
+    }
+
+    public String getEffect() {
+        return effect;
+    }
+
+    public void setEffect(String effect) {
+        this.effect = effect;
     }
 }
