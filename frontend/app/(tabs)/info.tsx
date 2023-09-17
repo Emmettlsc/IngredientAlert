@@ -10,7 +10,8 @@ export default function Info() {
     <ScrollView style={styles.container}>
       <Text style={styles.title}>{product.name}</Text>
       <View style={styles.imgcontainer}>
-        <Image source={require('../../assets/images/dummyProduct.png')} style={styles.productImage} />
+        {/* <Image source={require('../../assets/images/dummyProduct.png')} style={styles.productImage} /> */}
+        <Image source={{ uri: 'https://images.openfoodfacts.org/images/products/004/400/004/7009/front_en.20.400.jpg' }} style={styles.productImage} />
       </View>
       <Text style={styles.subtitle}>Ingredients:</Text>
       {product.ingredients.map((ingredient, index) => (
