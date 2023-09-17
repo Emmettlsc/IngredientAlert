@@ -7,12 +7,5 @@
             "Aspartame",
             "Phosphoric Acid",
             "Natural Flavors"
-        ],
-        "dangerousIngredients": [
-            "Aspartame"
-        ],
-        "healthRisks": {
-            "Aspartame": "Potential carcinogen, can lead to neurological issues"
-        }
+        ]
     }
-}
