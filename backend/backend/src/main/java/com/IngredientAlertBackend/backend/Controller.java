@@ -17,7 +17,7 @@ class Ingredient {
     private String name;
     private HashMap<String, String> harmfulIngredients = HashMap<String, String>();
 
-    harmfulIngredients.put("carcinogen", "Large amounts of carinogen can cause cancer.");
+    harmfulIngredients.put("aspartame", "Large amounts of aspartame can cause cancer.");
     harmfulIngredients.put("high fructose corn syrup", "Excess amounts can lead to diabetes and obesity.");
     harmfulIngredients.put("canola oil", "Leads to imflammation.");
     harmfulIngredients.put("palm oil", "Leads to imflammation.");
@@ -27,5 +27,9 @@ class Ingredient {
 
     public String getName() {
         return name;
+    }
+
+    public HashMap<String, String> getHarmfulIngredients() {
+        return this.harmfulIngredients;
     }
 }
