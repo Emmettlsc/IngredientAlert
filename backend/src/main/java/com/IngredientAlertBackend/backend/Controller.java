@@ -23,7 +23,6 @@ public class Controller {
 
     private Map<String, String> harmfulIngredients;
 
-    @Bean
     public Map<String, String> harmfulIngredients() {
         Map<String, String> harmfulIngredients = new HashMap<>();
         harmfulIngredients.put("aspartame", "Potential carcinogen, can lead to neurological issues.");
@@ -53,9 +52,10 @@ public class Controller {
 
         JsonNode ingredientsNode = result.get("product").get("ingredients_text");
         List<String> ingredients = Arrays.asList(ingredientsNode.asText().split(","));
-
+        Map<String, String> harmfulIngredients = harmfulIngredients();
         List<String> dangerousIngredients = new ArrayList<>();
         Map<String, String> healthRisks = new HashMap<>();
+
 
         for (String ingredient : ingredients) {
             if (harmfulIngredients.containsKey(ingredient.toLowerCase().trim())) {
@@ -77,4 +77,3 @@ public class Controller {
     }
 
 }
-
