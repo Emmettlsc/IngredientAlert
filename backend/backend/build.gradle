@@ -13,11 +13,14 @@ java {
 
 repositories {
 	mavenCentral()
+	google()
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'org.postgresql', name: 'postgresql', version: '42.6.0'
 }
 
 tasks.named('test') {
