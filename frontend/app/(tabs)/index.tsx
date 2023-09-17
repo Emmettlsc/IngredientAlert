@@ -1,12 +1,14 @@
 import { StyleSheet } from 'react-native';
 
 import FoodCamera from '../../components/FoodCamera';
+import BarcodeScanner from '../../components/BarcodeScanner';
 import { View } from '../../components/Themed';
 
 export default function addFood() {
   return (
     <View style={styles.container}>
-      <FoodCamera />
+      {/* <FoodCamera /> */}
+      <BarcodeScanner />
     </View>
   );
 }
