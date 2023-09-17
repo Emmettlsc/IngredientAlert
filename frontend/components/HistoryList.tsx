@@ -11,7 +11,7 @@ const HistoryList = ({ onItemPress }) => {
     return (
         <View style={{ flex: 1 }}>
             <FlatList
-                data={Array(20).fill(mockData.product)} //repeats the mockData 20 times for demonstration
+                data={Array(1).fill(mockData.product)} //repeats the mockData 20 times for demonstration
                 renderItem={renderItem}
                 keyExtractor={(item, index) => index.toString()}
             />

@@ -18,7 +18,7 @@ export default function Info() {
       {product.ingredients.map((ingredient, index) => (
         <Text
           key={index}
-          style={product.dangerousIngredients.includes(ingredient) ? styles.dangerousIngredient : styles.ingredient}>
+          style={product.dangerousIngredients.includes(ingredient.trim()) ? styles.dangerousIngredient : styles.ingredient}>
           {ingredient.trim()}
         </Text>
       ))}
