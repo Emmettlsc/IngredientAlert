@@ -25,6 +25,7 @@ class Ingredient {
     harmfulIngredients.put("carrageenan", "Increases fasting blood sugar and glucose intolerance.");
     harmfulIngredients.put("monosodium glutamate", "High in sodium and leads to addiction.");
 
+    
     public String getName() {
         return name;
     }
