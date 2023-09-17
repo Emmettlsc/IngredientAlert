@@ -53,48 +53,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    camera: {
-        flex: 1,
-    },
-    toggleContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        // backgroundColor: 'rgba(0,0,0,0.5)',
-        paddingHorizontal: 15,
-        paddingVertical: 5,
-        position: 'absolute',
-        top: 20,
-        left: 10,
-        right: 10,
-        borderRadius: 15,
-    },
-    captureContainer: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        // backgroundColor: 'rgba(0,0,0,0.5)',
-        paddingHorizontal: 20,
-        paddingVertical: 5,
-        position: 'absolute',
-        bottom: 20,
-        left: '34%',
-        borderRadius: 15,
-    },
-    button: {
-        padding: 8,
-        alignItems: 'center',
-        borderRadius: 8,
-        borderWidth: 1,
-        borderColor: 'white',
-    },
-    selectedButton: {
-        backgroundColor: 'rgba(255,255,255,0.2)',
-    },
-    text: {
-        fontSize: 14,
-        fontWeight: 'bold',
-        color: 'white',
-    },
 });
 
 
