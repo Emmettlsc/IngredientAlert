@@ -14,6 +14,7 @@ import java.lang.reflect.Array;
 import java.util.HashMap;
 import java.util.Map;
 
+
 @RestController
 public class Controller {
     @Bean
@@ -50,7 +51,9 @@ public class Controller {
     @GetMapping("/api/test")
     public String getIngredient() {
         return "hello";
+    @GetMapping("/api/{param}")
+    public String index(@PathVariable String ingredient) {
+        return "Here is your ingredient: " + ingredient;
     }
 
 }
-
