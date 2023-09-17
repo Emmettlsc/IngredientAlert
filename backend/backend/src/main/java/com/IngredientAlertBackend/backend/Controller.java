@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.HashMap;
+
 @RestController
 public class Controller {
 
@@ -21,7 +23,9 @@ public class Controller {
         JsonNode jsonNode = mapper.readTree(result);
 
         Ingredient newIngredient = new Ingredient();
-        newIngredient.setBrandName(jsonNode.get("id").textValue());
+        JsonNode noode = jsonNode.get("id");
+        System.out.println(noode != null);
+        //newIngredient.setBrandName(jsonNode.get("id").textValue());
         //newIngredient.setName(jsonNode.get("product_name").asText());
         //newIngredient.setIngredients(new String[]{jsonNode.get("ingredients").asText()});
         newIngredient.setEffect("big ass dick");
@@ -43,6 +47,15 @@ class Ingredient {
 
     private String effect;
 
+    private HashMap<String, String> harmfulIngredients = HashMap<String, String>();
+
+    harmfulIngredients.put("aspartame", "Large amounts of aspartame can cause cancer.");
+    harmfulIngredients.put("high fructose corn syrup", "Excess amounts can lead to diabetes and obesity.");
+    harmfulIngredients.put("canola oil", "Leads to imflammation.");
+    harmfulIngredients.put("palm oil", "Leads to imflammation.");
+    harmfulIngredients.put("vegetable oil", "Leads to imflammation.");
+    harmfulIngredients.put("carrageenan", "Increases fasting blood sugar and glucose intolerance.");
+    harmfulIngredients.put("monosodium glutamate", "High in sodium and leads to addiction.");
     public String getBrandName() {
         return brandName;
     }
