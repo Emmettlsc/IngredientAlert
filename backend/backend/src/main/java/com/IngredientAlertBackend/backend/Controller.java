@@ -2,9 +2,7 @@ package com.IngredientAlertBackend.backend;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-//import pl.coderion.model.ProductResponse;
-//import pl.coderion.service.OpenFoodFactsWrapper;
-//import pl.coderion.service.impl.OpenFoodFactsWrapperImpl;
+
 
 @RestController
 public class Controller {
