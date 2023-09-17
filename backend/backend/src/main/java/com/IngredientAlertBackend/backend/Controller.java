@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+
 @RestController
 public class Controller {
 
@@ -17,6 +18,9 @@ public class Controller {
     @GetMapping("/api/test")
     public String getIngredient() {
         return "hello";
+    @GetMapping("/api/{param}")
+    public String index(@PathVariable String ingredient) {
+        return "Here is your ingredient: " + ingredient;
     }
 
 }
@@ -26,6 +30,14 @@ class Ingredient {
     private String[] ingredients;
 
     private String effect;
+    private HashMap<String, String> harmfulIngredients = HashMap<String, String>();
+
+    harmfulIngredients.put("high fructose corn syrup", "Excess amounts can lead to diabetes and obesity.");
+    harmfulIngredients.put("canola oil", "Leads to imflammation.");
+    harmfulIngredients.put("palm oil", "Leads to imflammation.");
+    harmfulIngredients.put("vegetable oil", "Leads to imflammation.");
+    harmfulIngredients.put("carrageenan", "Increases fasting blood sugar and glucose intolerance.");
+    harmfulIngredients.put("monosodium glutamate", "High in sodium and leads to addiction.");
 
     public String getName() {
         return name;
@@ -46,4 +58,5 @@ class Ingredient {
     public void setEffect(String effect) {
         this.effect = effect;
     }
+
 }
