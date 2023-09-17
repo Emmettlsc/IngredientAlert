@@ -1,8 +1,7 @@
-// HistoryList.tsx
 import React from 'react';
 import { FlatList, View } from 'react-native';
 import HistoryItem from './HistoryItem';
-import mockData from '../data/mockData.json';
+import mockData from '../data/mockDataOld.json';
 
 const HistoryList = ({ onItemPress }) => {
     const renderItem = ({ item }) => (

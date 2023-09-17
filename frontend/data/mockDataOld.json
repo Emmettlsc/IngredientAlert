@@ -1,0 +1,18 @@
+{
+    "product": {
+        "name": "Sugar-Free Cola",
+        "ingredients": [
+            "Water",
+            "Caramel Color",
+            "Aspartame",
+            "Phosphoric Acid",
+            "Natural Flavors"
+        ],
+        "dangerousIngredients": [
+            "Aspartame"
+        ],
+        "healthRisks": {
+            "Aspartame": "Potential carcinogen, can lead to neurological issues"
+        }
+    }
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { Text, View } from '../../components/Themed';
 import HistoryList from '../../components/HistoryList';
+import { ProductProvider } from '../../contexts/ProductContext';
 
 export default function History() {
 
