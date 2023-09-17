@@ -2,6 +2,7 @@
 import React, { useState, useRef } from 'react';
 import { View, Text, Button, TouchableOpacity, StyleSheet } from 'react-native';
 import { Camera, CameraType } from 'expo-camera';
+import Uri from "ajv/lib/runtime/uri";
 
 export default function FoodCamera() {
     const [type, setType] = useState(CameraType.back);
@@ -26,8 +27,22 @@ export default function FoodCamera() {
     async function captureImage() {
         if (cameraRef.current) {
             const photo = await cameraRef.current.takePictureAsync();
+            const barcode = 0;
+            // const url = 'https://your-spring-boot-api-endpoint/api/code/' + barcode;
+            const url = 'http://192.168.1.30:8080/api/code/0044000047009';
+            //Barcode extracted from photo above
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                })
+                .catch(error => {
+
+                });
+
             //can use this `photo` object to send to server
             console.log(photo.uri);
+            console.log("HERE");
         }
     }
 

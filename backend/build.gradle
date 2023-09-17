@@ -13,11 +13,16 @@ java {
 
 repositories {
 	mavenCentral()
+	google()
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.5'
+	implementation 'org.json:json:20171018'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'org.postgresql', name: 'postgresql', version: '42.6.0'
 }
 
 tasks.named('test') {

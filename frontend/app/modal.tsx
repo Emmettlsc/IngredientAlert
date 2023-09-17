@@ -6,13 +6,12 @@ import { Text, View } from '../components/Themed';
 export default function modal() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Camera Usage Instructions</Text>
+      <Text style={styles.title}>Barcode Scanner Usage Instructions</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 
-      <Text style={styles.instruction}>1. Select your mode: Ingredients, Label, or Barcode.</Text>
-      <Text style={styles.instruction}>2. Position the camera to capture the desired item.</Text>
-      <Text style={styles.instruction}>3. Press the capture button once ready.</Text>
-      <Text style={styles.instruction}>4. The image will be analyzed and results will be shown accordingly.</Text>
+      <Text style={styles.instruction}>1. Position the camera to capture the desired barcode.</Text>
+      <Text style={styles.instruction}>2. Camera will capture the barcode when detected.</Text>
+      <Text style={styles.instruction}>3. The image will be a nalyzed and results will be shown accordingly.</Text>
 
       {/* use a light status bar on iOS to account for the black space above the modal */}
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
